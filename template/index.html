@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Test Cases Form</title>
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div style="width: 50%; float: left;">
+        <img src="{{url_for('static', filename='a.png')}}" align="left" height="100px" width="100px"/>
+      </div>
+      <div style="width: 50%; float: right;">
+        <img src="{{url_for('static', filename='b.png')}}" align="right" height="100px" width="300px"/>
+      </div>
+    </div>
+    <h1>Are you frustrated 🤯 to create the test case manually?</h1>
+    <h5>
+      By entering just the module name below ⬇️. <br />
+      in just few minutes, ChatGPT can enable you to get your test case and also
+      create it for you along with your Test Rail project.
+    </h5>
+
+    <form method="POST">
+      <label for="cars">Choose a Project from TestRail:</label>
+      <div class="dropdown">
+        <select class="dropdown" id="drpProject">
+          <option>Select any Project</option>
+        </select>
+      </div>
+      <label for="cars">Choose a Test Suites from Project:</label>
+      <div class="dropdown">
+        <select class="dropdown" id="drpTestSuites">
+          <option>Select any TestSuite</option>
+        </select>
+      </div>
+
+      <label>Choose a Section where you need to create your test cases:</label>
+      <div class="dropdown">
+        <select class="dropdown" id="drpTestSection">
+          <option>Select any TestSection</option>
+        </select>
+      </div>
+
+      <br /><br />
+      <label for="test-case">Give me your Module Name:</label>
+      <input type="text" name="variable" id="test-case" />
+      <input type="submit" value="Generate Test Cases" />
+    </form>
+  </body>
+</html>
